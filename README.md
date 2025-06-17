@@ -1,6 +1,6 @@
 # Pipeline RAG Avanzado para Procesamiento de PDF y Evaluación de LLM
 
-Este repositorio contiene un Jupyter Notebook (`RAG_clean (1).ipynb`) que demuestra un pipeline completo de extremo a extremo para procesar documentos PDF destinados a aplicaciones de Generación Aumentada por Recuperación (RAG). Incluye limpieza avanzada de texto, detección de elementos estructurales, fragmentación semántica (chunking), creación de un almacén de vectores usando embeddings de Azure OpenAI, una estrategia de recuperación híbrida (FAISS + BM25) con reordenamiento (reranking) y un marco de evaluación para comparar diferentes Modelos de Lenguaje Grandes (LLM) en varias tareas RAG.
+Este repositorio contiene un Jupyter Notebook (`RAG_clean (1) (1).ipynb`) que demuestra un pipeline completo de extremo a extremo para procesar documentos PDF destinados a aplicaciones de Generación Aumentada por Recuperación (RAG). Incluye limpieza avanzada de texto, detección de elementos estructurales, fragmentación semántica (chunking), creación de un almacén de vectores usando embeddings de Azure OpenAI, una estrategia de recuperación híbrida (FAISS + BM25) con reordenamiento (reranking) y un marco de evaluación para comparar diferentes Modelos de Lenguaje Grandes (LLM) en varias tareas RAG.
 
 ## Descripción General
 
@@ -12,7 +12,7 @@ El notebook realiza los siguientes pasos clave:
 4.  **Creación del Almacén de Vectores:** Genera embeddings para los fragmentos de texto utilizando el modelo `text-embedding-3-small` de Azure OpenAI y construye un índice FAISS para una búsqueda eficiente por similitud vectorial.
 5.  **Recuperación Híbrida:** Implementa un recuperador avanzado que combina la búsqueda densa de vectores (FAISS) y la búsqueda dispersa por palabras clave (BM25) con ponderación dinámica según el tipo de consulta.
 6.  **Reordenamiento (Reranking):** Utiliza un modelo CrossEncoder (`cross-encoder/ms-marco-MiniLM-L-12-v2`) para reordenar los documentos candidatos recuperados por la búsqueda híbrida y mejorar la relevancia final.
-7.  **Evaluación de LLM:** Establece un marco para evaluar múltiples LLM (Azure GPT-4 Turbo, Google Gemini 1.5 Pro, HuggingFace Hub Mixtral y Llama 3) en tareas basadas en RAG (Resumen, Generación de Preguntas, Preguntas y Respuestas) utilizando el contexto recuperado.
+7.  **Evaluación de LLM:** Establece un marco para evaluar múltiples LLM (Azure GPT-4o, Google Gemini 1.5 Pro, HuggingFace Hub Mixtral y Llama 3) en tareas basadas en RAG (Resumen, Generación de Preguntas, Preguntas y Respuestas) utilizando el contexto recuperado.
 8.  **Recolección de Resultados:** Almacena los resultados de la evaluación, incluyendo tiempos de ejecución y respuestas de los LLM, en un archivo CSV.
 
 ## Características Clave
